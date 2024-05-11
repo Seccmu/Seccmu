@@ -1,16 +1,23 @@
-### Hi there 👋
+[<img align="right" src="https://github-readme-stats.vercel.app/api?username=Seccmu&theme=dracula" alt="github stats">](#seccmu-ivanov "github stats")
+# Seccmu Ivanov
+```C++
+for (int day : days) {
+    if (!workload.isUrgent()) {  
+        workload.workTomorrow();
+    }  
+}
+```
 
-<!--
-**Seccmu/Seccmu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## What is Seccmu?
 
-Here are some ideas to get you started:
+- [Human being](https://en.wiktionary.org/wiki/human_being)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Settings and Preferences
+[<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Seccmu&theme=dracula" alt="github stats">](#seccmu-ivanov "top langs")
+- Skills ![Python](https://img.shields.io/badge/-Python-9400D3?logo=python&logoColor=ffd700)
+![Java](https://img.shields.io/badge/-_Java_-c0c0c0?logo=openjdk&logoColor=111)
+![C](https://img.shields.io/badge/-_%20C_%20-c0c0c0?logo=C&logoColor=444)
+
+- Planing to learn [![C++](https://img.shields.io/badge/-C++-10508A?logo=c%2B%2B)](https://www.python.org/)
+
+- Platforms [![Windows](https://img.shields.io/badge/-Windows-black?logo=Windows&logoColor=fff)](https://www.microsoft.com/zh-cn/windows) [![Ubuntu](https://img.shields.io/badge/-Ubuntu-black?logo=Ubuntu&logoColor=fff)](https://ubuntu.com/)
