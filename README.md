@@ -1,4 +1,4 @@
-### Hey there, I'm Seccmu Ivanov! 👋
+### Hey there, I'm Seccmu! 👋
 
 ```bash
 for day in life; do
@@ -41,7 +41,7 @@ done
 - Sports
     - 🏓 **Table tennis**
 
-      ![Table tennis setup. Blade: Butterfly Harimoto Tomokazu Innerforce ALC. Forehand: Butterfly Dignics 05. Backhand: Butterfly Tenergy 64.](./assets/table-tennis-setup.svg)
+      ![Table tennis setup](./assets/table-tennis-setup.svg)
 
 ### 📊 GitHub Stats
 
@@ -50,4 +50,4 @@ done
 
 ### 📬 Contact
 
-- Email me: 
+[![Email](https://img.shields.io/badge/EMAIL-under%20construction-eeb800?logo=Mail.Ru)]() [![Blog](https://img.shields.io/badge/BLOG-under%20construction-eeb800?logo=Cloudflare%20Pages)]()

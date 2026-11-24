@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SVG 卡片编辑器</title>
+    <link rel="stylesheet" href="editor.css">
+    <script src="card-svg.js" defer></script>
+    <script src="editor.js" defer></script>
+</head>
+<body>
+    <header class="toolbar">
+        <h1>SVG 卡片编辑器</h1>
+        <div class="actions">
+            <label class="button" for="project-file">打开 SVG / JSON</label>
+            <input id="project-file" class="file-input" type="file" accept=".svg,.json">
+            <button id="save-project" type="button">保存 JSON</button>
+            <button id="save-svg" class="primary" type="button">导出 SVG</button>
+        </div>
+    </header>
+
+    <main class="workspace">
+        <section class="sidebar" aria-label="编辑卡片">
+            <section class="panel" id="card-controls">
+                <h2>卡片</h2>
+                <div class="fields">
+                    <label class="wide">文件名<input data-field="name" type="text" maxlength="100"></label>
+                    <label>宽度（px）<input data-field="width" type="number" min="160" max="2400"></label>
+                    <label>内边距<input data-field="padding" type="number" min="0" max="64"></label>
+                    <label>圆角<input data-field="radius" type="number" min="0" max="80"></label>
+                    <label>背景色<input data-field="background" type="color"></label>
+                    <label class="wide">默认字体<input data-field="font" type="text" maxlength="120" placeholder="Segoe UI, Arial, sans-serif"></label>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-heading">
+                    <h2>行与分栏</h2>
+                    <button id="add-row" type="button">＋ 添加行</button>
+                </div>
+                <div class="choices" id="rows" aria-label="选择行"></div>
+                <div id="row-controls" class="fields">
+                    <label>行高（px）<input data-field="height" type="number" min="22" max="800"></label>
+                    <label>列间距<input data-field="gap" type="number" min="0" max="48"></label>
+                    <label>背景色<input data-field="background" type="color"></label>
+                    <label class="check"><input data-field="paintBackground" type="checkbox"> 绘制行背景</label>
+                </div>
+                <div class="actions group-actions">
+                    <button id="row-up" type="button">↑ 上移</button>
+                    <button id="row-down" type="button">↓ 下移</button>
+                    <button id="copy-row" type="button">复制行</button>
+                    <button id="remove-row" type="button" class="danger">删除行</button>
+                </div>
+                <div class="columns-heading">
+                    <h3>当前行的列</h3>
+                    <button id="add-cell" type="button">＋ 添加列</button>
+                </div>
+                <div class="choices" id="cells" aria-label="选择列"></div>
+            </section>
+
+            <section class="panel">
+                <h2>列内容</h2>
+                <div id="cell-controls" class="fields">
+                    <label>类型
+                        <select data-field="type">
+                            <option value="text">文字</option>
+                            <option value="image">图片</option>
+                            <option value="swatch">色块</option>
+                            <option value="empty">留白</option>
+                        </select>
+                    </label>
+                    <label title="同一行的列按权重比例分宽，例如 1 和 2 表示一列占三分之一。">
+                        宽度权重<input data-field="weight" type="number" min="1" max="100">
+                    </label>
+                    <div id="text-fields" class="fields nested wide">
+                        <label class="wide">文字<textarea data-field="text" maxlength="600" rows="2"></textarea></label>
+                        <label class="wide">字体（留空继承）<input data-field="font" type="text" maxlength="120"></label>
+                        <label>字号<input data-field="size" type="number" min="8" max="160"></label>
+                        <label>字重
+                            <select data-field="fontWeight">
+                                <option value="400">常规</option>
+                                <option value="600">中粗</option>
+                                <option value="700">粗体</option>
+                            </select>
+                        </label>
+                        <label>文字颜色<input data-field="color" type="color"></label>
+                        <label>对齐
+                            <select data-field="align">
+                                <option value="left">左</option>
+                                <option value="center">居中</option>
+                                <option value="right">右</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div id="swatch-fields" class="fields nested wide">
+                        <label>色块颜色<input data-field="swatch" type="color"></label>
+                        <label>纹理
+                            <select data-field="pattern">
+                                <option value="solid">纯色</option>
+                                <option value="dots">圆点</option>
+                                <option value="stripes">斜纹</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div id="image-fields" class="fields nested wide">
+                        <div class="actions wide">
+                            <label class="button" for="image-file">选取图片</label>
+                            <input id="image-file" class="file-input" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+                            <button id="remove-image" type="button">移除图片</button>
+                        </div>
+                        <label class="wide">替代文字<input data-field="imageAlt" type="text" maxlength="160"></label>
+                        <label>适应方式
+                            <select data-field="fit">
+                                <option value="contain">完整显示</option>
+                                <option value="cover">填满并裁切</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="actions group-actions">
+                    <button id="cell-left" type="button">← 左移</button>
+                    <button id="cell-right" type="button">→ 右移</button>
+                    <button id="remove-cell" type="button" class="danger">删除列</button>
+                </div>
+            </section>
+        </section>
+
+        <section class="preview" aria-labelledby="preview-heading">
+            <div class="preview-header">
+                <h2 id="preview-heading">预览</h2>
+                <output id="dimensions"></output>
+            </div>
+            <div class="stage">
+                <img id="preview-image" alt="卡片实时预览">
+            </div>
+            <p id="status" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+</body>
+</html>
