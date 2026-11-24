@@ -1,35 +1,53 @@
-# Seccmu Ivanov
+### Hey there, I'm Seccmu Ivanov! 👋
 
-[<img align="right" src="https://github-readme-stats.vercel.app/api?username=Seccmu&theme=dracula" alt="github stats">](#seccmu-ivanov "github stats")
+```bash
+for day in life; do
+    if workload_is_urgent; then
+        open_for_business_against_my_will
+    else
+        workload_postpone_to_tomorrow
+    fi
 
+    date_with_girlfriend
+    rc=$?
 
-```Python
-for day in life:
-    if not workload.is_urgent():
-        workload.postpone_to_tomorrow()
-    try:
-        date_with_girlfriend()
-    except NoMoneyError:
-        play_with_eggs()
+    if [ "$rc" -ne 0 ]; then
+        case "$MOOD" in
+            dirt) eat_dirt ;;
+            farm) go_back_to_farming ;;
+            flat) lie_flat ;;
+            *)    wash_and_sleep ;;
+        esac
+    fi
+
+    tomorrow_again
+done
 ```
 
-## What is Seccmu?
+### 🤔 What is Seccmu? 
 
-- [Human being](https://en.wiktionary.org/wiki/human_being)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Bitcount+Single&weight=500&size=18&letterSpacing=-0.5px&duration=2000&pause=1500&color=089B22&vCenter=true&width=300&height=35&lines=Human+being.;Probably...;LLM+imitator.)](https://git.io/typing-svg)
 
-## Settings and Preferences
-[<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Seccmu&theme=dracula" alt="github stats">](#seccmu-ivanov "top langs")
-- Skills 
-    - ![Python](https://img.shields.io/badge/-Python-9400D3?logo=python&logoColor=ffd700) | Machine Learning, Data Analysis, Computer Vision
+### 🛠️ Interests & Skills
 
-    - ![Java](https://img.shields.io/badge/-_Java_-c0c0c0?logo=openjdk&logoColor=111) | Minecraft Mod Dev, Basic Grammar
+- 🏭 **Automation**: Working on ML models for industrial automation and control.
+- 🌐 **Web development**: A little frontend, a little backend. ~~全沾工程师~~
 
-    - ![C](https://img.shields.io/badge/-_%20C_%20-c0c0c0?logo=C&logoColor=444) | Basic Grammar
+### 🎮 Play with me
 
-- Planing to learn 
-    - ![C++](https://img.shields.io/badge/-C++-10508A?logo=c%2B%2B)
+- Games
+    -  **Minecraft**
+    -  **Arknights**: CN official server
+- Sports
+    - 🏓 **Table tennis**
 
-- Platforms 
-    - [![Windows](https://img.shields.io/badge/-Windows-black?logo=Windows&logoColor=fff)](https://www.microsoft.com/zh-cn/windows)
+      ![Table tennis setup. Blade: Butterfly Harimoto Tomokazu Innerforce ALC. Forehand: Butterfly Dignics 05. Backhand: Butterfly Tenergy 64.](./assets/table-tennis-setup.svg)
 
-    - [![Ubuntu](https://img.shields.io/badge/-Ubuntu-black?logo=Ubuntu&logoColor=fff)](https://ubuntu.com/)
+### 📊 GitHub Stats
+
+![Seccmu's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Seccmu&theme=vue) 
+![Seccmu's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Seccmu&theme=vue)
+
+### 📬 Contact
+
+- Email me: 
